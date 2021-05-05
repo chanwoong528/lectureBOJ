@@ -18,15 +18,19 @@ public class Main2309 {
 			sum = sum + arr[i];
 		}
 
-		int target = 100;
+		boolean check = false;
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = i + 1; j < arr.length; j++) {
 				if (sum - (arr[i] + arr[j]) == 100) {
 					arr[i] = -1;
 					arr[j] = -1;
+					check = true;
 					break;
 				}
 
+			}
+			if (check == true) {
+				break;
 			}
 
 		}
